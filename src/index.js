@@ -1,11 +1,15 @@
 // require('dotenv').config({path: './env'});
+// import express from "express";
+// const app = express();
 import dotenv from "dotenv";
+import { app } from './app.js';
 dotenv.config({ path: "./env" });
-
 import connectDB from "./db/index.js";
 
-console.log("MONGO_URI from env:", process.env.MONGO_URI);
-console.log("Loaded MONGO_URI:", process.env.MONGO_URI);
+
+
+// console.log("MONGO_URI from env:", process.env.MONGO_URI);
+// console.log("Loaded MONGO_URI:", process.env.MONGO_URI);
 
 connectDB()
   .then(() => {
